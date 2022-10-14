@@ -60,8 +60,9 @@ class QuoteProvider {
                 quote = "El mejor lugar para estudiar es el ITVO",
                 author = "Academia de Informatica y Tics"),
             QuoteModel(
-                quote = "El respeto al derecho ajeno es la paz",
-                author = "Benito Juárez García")
+                quote = "El tiempo es el castigo de lo que no han aprendido a vivirla",
+                author = "Mario Solano Cruz"),
+
         )
     }
 }
