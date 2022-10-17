@@ -4,6 +4,7 @@
     package="edu.itvo.ejercicioquots">
 
     <application
+        android:name=".QuotesApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,7 +15,7 @@
         android:theme="@style/Theme.Ejercicioquots"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.view.MainActivity"
+            android:name=".presentation.view.QuoteRandomActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Ejercicioquots.NoActionBar">
