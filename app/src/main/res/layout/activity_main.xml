@@ -5,8 +5,8 @@
     android:id="@+id/viewContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
-    tools:context=".presentation.view.MainActivity">
+    android:background="@color/material_dynamic_neutral20"
+    tools:context=".presentation.view.QuoteRandomActivity">
 
     <TextView
         android:id="@+id/tvQuote"
