@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item
+            android:id="@+id/add_item"
+            android:checkable="true"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/Add" />
+        <item
+            android:id="@+id/toshow_item"
+            android:checkable="true"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/To_show" />
+        <item
+            android:id="@+id/yospecify_item"
+            android:checkable="true"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/you_specify" />
+        <item
+            android:id="@+id/ready_item"
+            android:checkable="true"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/Ready" />
+    </group>
+
+</menu>
