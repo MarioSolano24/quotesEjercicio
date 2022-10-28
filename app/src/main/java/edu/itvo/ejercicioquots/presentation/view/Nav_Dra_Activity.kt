@@ -9,10 +9,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 import edu.itvo.ejercicioquots.R
 import edu.itvo.ejercicioquots.databinding.ActivityNavDraBinding
 
+@AndroidEntryPoint
 class Nav_Dra_Activity : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
@@ -44,14 +48,21 @@ class Nav_Dra_Activity : AppCompatActivity() , NavigationView.OnNavigationItemSe
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.add_item -> Toast.makeText(this, "Agregar Citas", Toast.LENGTH_SHORT).show()
-            R.id.toshow_item -> Toast.makeText(this, "Mostrar Cita Random", Toast.LENGTH_SHORT).show()
+            R.id.add_item -> replaceFragment(Add_Fragment())
+            R.id.toshow_item -> replaceFragment(QuoteRandomFragment())
             R.id.yospecify_item -> Toast.makeText(this, "Buscar Cita", Toast.LENGTH_SHORT).show()
             R.id.ready_item -> Toast.makeText(this, "Lista de Citas", Toast.LENGTH_SHORT).show()
         }
 
         drawer.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun replaceFragment(fragment: Fragment){
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {

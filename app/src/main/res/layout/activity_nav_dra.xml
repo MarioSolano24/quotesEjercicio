@@ -7,6 +7,16 @@
     tools:context=".presentation.view.Nav_Dra_Activity"
     android:id="@+id/drawer_layout"
     tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_layout"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <include
         layout="@layout/app_nav_draw"
         android:layout_width="match_parent"

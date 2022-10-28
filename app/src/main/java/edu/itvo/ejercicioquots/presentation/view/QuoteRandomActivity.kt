@@ -25,7 +25,7 @@ class QuoteRandomActivity : AppCompatActivity() {
         //----------------------------
         quoteViewModel.randomQuote()
         observer()
-        binding.viewContainer.setOnClickListener {
+        binding.viewContainerActivity.setOnClickListener {
             quoteViewModel.randomQuote()
         }
 
