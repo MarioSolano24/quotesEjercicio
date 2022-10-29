@@ -9,5 +9,5 @@ interface QuoteLocalDataSource {
     fun  getQuoteRandom(): Flow<QuoteModel>
 
     suspend fun  insertAll(quotes : List<QuoteModel>)
-    suspend fun  insert(quote : QuoteModel)
+    suspend fun  insert(quote : QuoteModel): Long
 }

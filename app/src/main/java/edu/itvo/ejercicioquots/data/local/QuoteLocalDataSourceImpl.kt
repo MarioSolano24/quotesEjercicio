@@ -29,8 +29,8 @@ class QuoteLocalDataSourceImpl  @Inject constructor(private val quoteDao: QuoteD
         quoteDao.insertAll(quotes!!.map { it.toEntity()})
     }
 
-    override suspend fun insert(quoteModel: QuoteModel) {
-        quoteDao.insert(quoteModel.toEntity())
+    override suspend fun insert(quoteModel: QuoteModel): Long {
+        return quoteDao.insert(quoteModel.toEntity())
     }
 
 }
